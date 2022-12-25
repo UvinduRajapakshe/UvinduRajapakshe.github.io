@@ -62,6 +62,11 @@ background: linear-gradient(90deg,#2ca2b461,#5598de70 24%,#7f87ff66 45%,#f65aad5
     hsl(45, 100%, 72%), 
     hsl(35, 100%, 68%)
   );
+  --text-gradient-white: linear-gradient(
+    to right, 
+    hsl(45, 100%, 95%), 
+    hwb(35 84% 0%)
+  );
 
   /* solid */
 
@@ -540,6 +545,15 @@ main {
   z-index: 1;
 }
 
+.service-place {
+  position: relative;
+  background: var(--border-gradient-white);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 2;
+}
+
 .service-item::before {
   content: "";
   position: absolute;
@@ -801,6 +815,13 @@ main {
 .timeline-item-title {
   font-size: var(--fs-6);
   line-height: 1.3;
+  margin-bottom: 7px;
+}
+
+.timeline-item-place {
+  color: aliceblue;
+  font-size: var(--fs-4);
+  line-height: 0.6.;
   margin-bottom: 7px;
 }
 
