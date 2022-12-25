@@ -501,28 +501,33 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+              <a href="https://www.credly.com/badges/9fdfb219-8fdc-4765-8b1b-1519d9a6e6fd"><h4 class="h4 timeline-item-title">Introduction to Cybersecurity
+              </h4></a>
 
-              <span>2007 — 2008</span>
+              <span>February 11, 2022</span>
+
+              <h5 class="h5 timeline-item-title">Cisco Networking Academy</h5>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                Cisco verifies the earner of this badge successfully completed the Introduction to Cybersecurity course. The holder of this student-level credential has introductory knowledge of cybersecurity, including the global implications of cyber threats on industries, and why cybersecurity is a growing profession. They understand vulnerabilities and threat detection and defense. They also have insight into opportunities available with pursuing cybersecurity certifications.
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+              <a href="https://www.credly.com/badges/da4f9b5c-a256-4312-a4a3-c37b9a792e50"><h4 class="h4 timeline-item-title">IT Essentials
+              </h4></a>
 
-              <span>2006 — 2007</span>
+              <span>December 22, 2022</span>
+
+              <h5 class="h5 timeline-item-title">Cisco Networking Academy</h5>
 
               <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
+                Cisco verifies the earner of this badge successfully completed the IT Essentials course and achieved this student level credential. Earner demonstrated a foundation knowledge in computer hardware and software, as well as operating systems, networking concepts, mobile devices, troubleshooting and responsibilities of an IT professional. Participated in up to 128 interactive activities and accumulated up to 26 hours of hands-on labs using hardware and/or Cisco Packet Tracer tool.
               </p>
+
+            </li>
 
             </li>
 
@@ -913,7 +918,7 @@
 
 
 
-
+<script src="blog.js"></script>
 
       <!--
         - #BLOG
@@ -1069,6 +1074,24 @@
               </a>
             </li>
 
+
+
+  <script>
+    // fetch data from xml ('https://techuvindubro.blogspot.com/feeds/posts/default') and display it in the blog section
+    fetch('https://techuvindubro.blogspot.com/feeds/posts/default')
+      .then(response => response.text())
+      .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+      .then(data => {
+        console.log(data);
+        document.getElementById('article_one').innerHTML = data.getElementsByTagName('title')[0].innerHTML;
+        document.getElementById('article_two').innerHTML = data.getElementsByTagName('title')[1].innerHTML;
+        document.getElementById('article_three').innerHTML = data.getElementsByTagName('title')[2].innerHTML;
+        document.getElementById('article_four').innerHTML = data.getElementsByTagName('title')[3].innerHTML;
+        document.getElementById('article_five').innerHTML = data.getElementsByTagName('title')[4].innerHTML;
+        document.getElementById('article_six').innerHTML = data.getElementsByTagName('title')[5].innerHTML;
+      })
+  </script>
+
             <li class="blog-post-item">
               <a href="#">
 
@@ -1086,7 +1109,7 @@
                     <time datetime="2022-02-23">Fab 23, 2022</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+                  <h3 class="h3 blog-item-title" id="article_six"></h3>
 
                   <p class="blog-text">
                     Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
